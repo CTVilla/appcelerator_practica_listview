@@ -1,6 +1,19 @@
 <Alloy>
 	<Collection id="localLibrary" src="feed" instance="true" />	
 	<Window class="container">		
-		<Label id="label" onClick="doClick">Hello, World</Label>
+		<ListView id="list" defaultItemTemplate="template">
+			<Templates>
+				<ItemTemplate name="template">
+                    <Label bindId="titlelbl"/>
+                    <Label bindId="descriptionlbl"/>
+                </ItemTemplate>
+			</Templates>
+			<ListSection dataCollection="$.localLibrary">
+				<ListItem
+					titlelbl:text="{title}"
+					descriptionlbl:text="{description}"
+				/>
+			</ListSection>
+		</ListView>
 	</Window>
 </Alloy>

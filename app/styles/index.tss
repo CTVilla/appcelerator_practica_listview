@@ -13,3 +13,10 @@
 		fontSize: 12
 	}
 }
+"#list" : {
+	top:"0dp",
+	left:"0dp",
+	height:Ti.UI.FILL,
+	width: Titanium.UI.FILL
+}
+
