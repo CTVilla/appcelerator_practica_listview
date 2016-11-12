@@ -4,8 +4,10 @@
 		<ListView id="list" defaultItemTemplate="template">
 			<Templates>
 				<ItemTemplate name="template">
-                    <Label bindId="titlelbl"/>
-                    <Label bindId="descriptionlbl"/>
+					<View class="row">
+						<Label bindId="titlelbl" class="titlelbl"/>
+	                    <Label bindId="descriptionlbl" class="descriptionlbl"/>	
+					</View>
                 </ItemTemplate>
 			</Templates>
 			<ListSection dataCollection="$.localLibrary">
