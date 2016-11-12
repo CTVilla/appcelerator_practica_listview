@@ -1,21 +1,18 @@
 function doClick(e) {
     alert($.label.text);
 }
-
 var tidevfeed=$.localLibrary;
-
 tidevfeed.fetch({
 	requestMethod: 'GET',
 	localOnly:false,		
 	success:function(col){
-		// working			
-		console.log("Resultado: " + JSON.stringify(col));
-		
+		// working
+		print("Success");
+		print_json(col);
 	},
 	error:function(err){
 		// something is wrong.. 
-		console.log("something is wrong");
+		print("something is wrong");
 	}
 });
-
 $.index.open();

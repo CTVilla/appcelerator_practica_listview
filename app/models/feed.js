@@ -1,10 +1,8 @@
 exports.definition = {
-
     config : {
-
 		parentNode: function (data) {
     		var entries = [];
-    		console.log('parentNodedata: '+JSON.stringify(data));
+    		print_json(data);
     		_.each(data, function(_entry) {
 	        	var entry = {};
 
@@ -37,23 +35,19 @@ exports.definition = {
 					resultado=_entry.iconUrl;
 					return resultado;
 				};	         		         
-				entry.Id=entry_getId();
-				entry.Nombre=entry_getTitle();
-				entry.Description=entry_getDescription();
-				entry.Subdescription=entry_getSubdescription();				
-				entry.Document=entry_getDocument();
-				entry.IconUrl=entry_getIconUrl();           	   
+				entry.id=entry_getId();
+				entry.title=entry_getTitle();
+				entry.description=entry_getDescription();
+				entry.subdescription=entry_getSubdescription();				
+				entry.document=entry_getDocument();
+				entry.iconUrl=entry_getIconUrl();
 		       	entries.push(entry);
-
     		});
-
     		return entries;
-
 		},
 		"columns" : {
 		    "id":"integer",
 		    "title":"text",
-		    "nombre":"text",
 		    "description":"text",		    
 		    "subdescription":"text",
 		    "document":"text",
@@ -61,9 +55,8 @@ exports.definition = {
 		},
         "defaults": {
 		    "id":0,
-		    "title":"",
-		    "nombre":"",
-		    "description":"",		    
+		    "titulo":"",
+		    "descripcion":"",		    
 		    "subdescription":"",
 		    "document":"",
 		    "iconUrl":""
