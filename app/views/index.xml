@@ -5,15 +5,15 @@
 			<Templates>
 				<ItemTemplate name="template">
 					<View class="row">
-						<Label bindId="titlelbl" class="titlelbl"/>
-	                    <Label bindId="descriptionlbl" class="descriptionlbl"/>	
+						<Label bindId="lbl_title" id="lbl_title" class="labels"/>
+	                    <Label bindId="lbl_description" id="lbl_description" class="labels"/>	
 					</View>
                 </ItemTemplate>
 			</Templates>
 			<ListSection dataCollection="$.localLibrary">
 				<ListItem
-					titlelbl:text="{title}"
-					descriptionlbl:text="{description}"
+					lbl_title:text="{title}"
+					lbl_description:text="{description}"
 				/>
 			</ListSection>
 		</ListView>

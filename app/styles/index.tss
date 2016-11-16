@@ -26,16 +26,16 @@
 	width: Titanium.UI.FILL,
 	layout:"vertical"
 }
-".titlelbl":{
+".lbl_title":{
 	color:"#000",
 	font:"14sp",
-	fontWeight:"bold",
-	height:"35dp",
-	width: Titanium.UI.FILL,
+	fontWeight:"bold"
 }
-".descriptionlbl" : {
+".lbl_description" : {
 	color:"#CCC",
 	font:"12sp",
+}
+".labels":{
 	height:"35dp",
-	width: Titanium.UI.FILL,
+	width: Titanium.UI.FILL
 }
