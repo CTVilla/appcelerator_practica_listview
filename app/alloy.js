@@ -16,7 +16,7 @@ var print_json = function (json) {
 	print(jstr(json));
 };
 
-var IP_SERVER = "192.168.8.149";
-var PORT = ":3000";
+var IP_SERVER = "0.0.0.0";
+var PORT = ":80";
 var END_POINT = IP_SERVER + PORT;
 var WS_GET_FEED = END_POINT + "/feed";
