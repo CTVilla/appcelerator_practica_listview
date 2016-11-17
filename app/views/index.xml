@@ -1,7 +1,7 @@
 <Alloy>
 	<Collection id="localLibrary" src="feed" instance="true" />	
 	<Window class="container">		
-		<ListView id="list" defaultItemTemplate="template">
+		<ListView id="list" defaultItemTemplate="template" onItemclick="OnItemSelected">
 			<Templates>
 				<ItemTemplate name="template">
 					<View class="row">

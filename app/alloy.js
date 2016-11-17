@@ -10,13 +10,12 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-var print =  console.log;
-var jstr = JSON.stringify;
-var print_json = function (json) {
-	print(jstr(json));
+var print = function(o) {
+	console.log(o);
 };
+var tojson = JSON.stringify;
 
-var IP_SERVER = "0.0.0.0";
-var PORT = ":80";
+var IP_SERVER = "192.168.0.20";
+var PORT = ":3000";
 var END_POINT = IP_SERVER + PORT;
 var WS_GET_FEED = END_POINT + "/feed";

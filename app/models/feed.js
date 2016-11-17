@@ -2,7 +2,6 @@ exports.definition = {
     config : {
 		parentNode: function (data) {
     		var entries = [];
-    		print_json(data);
     		_.each(data, function(_entry) {
 	        	var entry = {};
 
