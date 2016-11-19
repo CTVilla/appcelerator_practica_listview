@@ -1,24 +1,39 @@
+/**
+ * We define the listview.
+ */
 var lsv_tidev=$.localLibrary;
-var view_detail;
+
+/**
+ * Event OnItemSelected
+ * This function is used to open another window
+ * sending the item selected.
+ * @param {Object} e Event variable
+ */
 function OnItemSelected(e) {
-	//Utilizamos la funcion at por que lsv_tidev es del tipo Titanium.UI.Collection
 	itemSelected = lsv_tidev.at(e.itemIndex);
-	print(itemSelected);
-	if(view_detail == null){
-		view_detail = Alloy.createController('detail').getView();
-	}
-	view_detail.open();
-	
+	view_detail = Alloy.createController('detail', itemSelected).getView();
+	$.index.openWindow(view_detail);
 }
-lsv_tidev.fetch({
-	requestMethod: 'GET',
-	localOnly:false,		
-	success:function(col){
-		print("Success");
-	},
-	error:function(err){
-		print("something is wrong");
-		jprint(err);
-	}
-});
+/**
+ * Calling the funcion to fill the listview.
+ */
+fetchListview(lsv_tidev, GET, false, OnSuccessCallback, OnErrorCallback);
+/**
+ * Function to recieve the success response
+ * @param {Object} response
+ */
+function OnSuccessCallback(response) {
+	print("Success");
+}
+/**
+ * Function to catch the error.
+ * @param {Object} response
+ */
+function OnErrorCallback(response) {
+	print("something is wrong");
+	print(err);
+}
+/**
+ * Open the index view.
+ */
 $.index.open();
