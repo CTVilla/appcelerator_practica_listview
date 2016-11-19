@@ -1,4 +1,7 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window title="Detail" class="container">
+		<Label id="lbl_titulo">aqui va ir al titulo</Label>
+		<Label id="lbl_description">aqui va a ir la descripcion</Label>
+		<Label id="lbl_url">aqui va a ir la url</Label>
+ 	</Window>
 </Alloy>
